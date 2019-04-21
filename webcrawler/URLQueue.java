@@ -1,4 +1,4 @@
-package ie.moguntia.webcrawler;
+package webcrawler;
 
 import java.net.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Class URLQueue
  *
- * This class implements the ie.moguntia.Queue interface for queues of 'tasks'
+ * This class implements the Queue interface for queues of 'tasks'
  * in a multithreaded environment.
  *
  * This class has a queue and a set of URLs (exactly: Strings that represent
@@ -55,7 +55,7 @@ import java.util.*;
  * 
  */
 
-public class URLQueue implements ie.moguntia.threads.Queue {
+public class URLQueue implements threads.Queue {
 
 	LinkedList evenQueue;
 	LinkedList oddQueue;

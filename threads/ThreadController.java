@@ -1,4 +1,4 @@
-package ie.moguntia.threads;
+package threads;
 
 /**
  * A simple controller class for a multithreaded environment, where threads

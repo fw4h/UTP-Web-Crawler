@@ -1,16 +1,11 @@
-package ie.moguntia.webcrawler;
-import ie.moguntia.threads.*;
+package webcrawler;
+
+import threads.*;
 import java.net.*;
 
 public class PSucker implements MessageReceiver {
-	public PSucker(Queue q, int maxLevel, int maxThreads)
-		throws InstantiationException, IllegalAccessException {
-		ThreadController tc = new ThreadController(PSuckerThread.class,
-												   maxThreads,
-												   maxLevel,
-												   q,
-												   0,
-												   this);
+	public PSucker(Queue q, int maxLevel, int maxThreads) throws InstantiationException, IllegalAccessException {
+		ThreadController tc = new ThreadController(PSuckerThread.class, maxThreads, maxLevel, q, 0, this);
 	}
 
 	public void finishedAll() {
@@ -31,6 +26,8 @@ public class PSucker implements MessageReceiver {
 			int maxLevel = 2;
 			int maxThreads = 10;
 			int maxDoc = -1;
+			System.out.println(args.length);
+			
 			if (args.length == 5) {
 				maxThreads = Integer.parseInt(args[4]);
 			}

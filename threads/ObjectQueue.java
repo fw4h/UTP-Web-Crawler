@@ -1,4 +1,4 @@
-package ie.moguntia.threads;
+package threads;
 import java.util.*;
 
 /**

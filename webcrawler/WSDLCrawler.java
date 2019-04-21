@@ -1,16 +1,11 @@
-package ie.moguntia.webcrawler;
-import ie.moguntia.threads.*;
+package webcrawler;
+
+import threads.*;
 import java.net.*;
 
 public class WSDLCrawler implements MessageReceiver {
-	public WSDLCrawler(Queue q, int maxLevel, int maxThreads)
-		throws InstantiationException, IllegalAccessException {
-		ThreadController tc = new ThreadController(WSDLCrawlerThread.class,
-												   maxThreads,
-												   maxLevel,
-												   q,
-												   0,
-												   this);
+	public WSDLCrawler(Queue q, int maxLevel, int maxThreads) throws InstantiationException, IllegalAccessException {
+		ThreadController tc = new ThreadController(WSDLCrawlerThread.class, maxThreads, maxLevel, q, 0, this);
 	}
 
 	public void finishedAll() {

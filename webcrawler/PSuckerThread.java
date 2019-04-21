@@ -1,6 +1,6 @@
-package ie.moguntia.webcrawler;
+package webcrawler;
 
-import ie.moguntia.threads.*;
+import threads.*;
 import java.net.*;
 import java.io.*;
 import java.util.Vector;

@@ -1,4 +1,4 @@
-package ie.moguntia.webcrawler;
+package webcrawler;
 
 import java.net.*;
 import java.io.*;
